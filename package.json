@@ -1,0 +1,37 @@
+{
+  "name": "lint-staged-no-stash-bug",
+  "version": "1.0.0",
+  "description": "Minimal-ish reproduce of a bug around lint-staged when used with the --no-stash flag",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinslota/lint-staged-no-stash-bug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/martinslota/lint-staged-no-stash-bug/issues"
+  },
+  "homepage": "https://github.com/martinslota/lint-staged-no-stash-bug#readme",
+  "keywords": [
+    "lint-staged",
+    "no-stash",
+    "bug"
+  ],
+  "author": "Martin Slota",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "lint-staged": "lint-staged --no-stash"
+  },
+  "devDependencies": {
+    "lint-staged": "15.2.0",
+    "pre-commit": "1.2.2",
+    "prettier": "3.3.3"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --check"
+    ]
+  }
+}
