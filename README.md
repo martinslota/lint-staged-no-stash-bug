@@ -43,7 +43,7 @@ The staged change was committed while the unstaged change should remain as an un
 Both the staged and unstaged changes got committed:
 
 ```diff
-$ git diff HEAD^                               
+$ git diff HEAD^ HEAD
 diff --git a/index.js b/index.js
 new file mode 100644
 index 0000000..f6b75cd
